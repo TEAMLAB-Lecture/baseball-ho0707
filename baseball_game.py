@@ -277,6 +277,7 @@ def main():
             break
         if is_validated_number(user_input_number):
             strikes_or_ball = get_strikes_or_ball(user_input_number, random_number)
+            print('Strikes : {} , Balls : {}'.format(strikes_or_ball[0], strikes_or_ball[1]))
             if strikes_or_ball[0] == 3:
                 while True:
                     one_more = input('You win, one more(Y/N)?')
@@ -289,8 +290,6 @@ def main():
                         break
                     else:
                         print('Wrong Input, Input again')
-            else:
-                print('Strikes : {} , Balls : {}'.format(strikes_or_ball[0], strikes_or_ball[1]))
         else:
             print('Wrong Input, Input again')
 
