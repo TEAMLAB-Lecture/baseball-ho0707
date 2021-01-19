@@ -289,7 +289,7 @@ def main():
                         flag = False
                         break
                     else:
-                        print('Wrong Input, Input again')
+                        print('Wrong Input')
         else:
             print('Wrong Input, Input again')
 
