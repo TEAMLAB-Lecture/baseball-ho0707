@@ -273,6 +273,8 @@ def main():
     flag = True
     while flag:
         user_input_number = input('Input guess number : ')
+        if user_input_number == '0':
+            break
         if is_validated_number(user_input_number):
             strikes_or_ball = get_strikes_or_ball(user_input_number, random_number)
             if strikes_or_ball[0] == 3:
