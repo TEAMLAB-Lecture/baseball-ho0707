@@ -285,7 +285,7 @@ def main():
                         random_number = str(get_not_duplicated_three_digit_number())
                         print("Random Number is : ", random_number)
                         break
-                    elif is_no(one_more):
+                    elif is_no(one_more) or one_more == '0':
                         flag = False
                         break
                     else:
