@@ -277,7 +277,7 @@ def main():
             strikes_or_ball = get_strikes_or_ball(user_input_number, random_number)
             if strikes_or_ball[0] == 3:
                 while True:
-                    one_more = input('You win, one more(Y/N) ?')
+                    one_more = input('You win, one more(Y/N)?')
                     if is_yes(one_more):
                         random_number = str(get_not_duplicated_three_digit_number())
                         print("Random Number is : ", random_number)
