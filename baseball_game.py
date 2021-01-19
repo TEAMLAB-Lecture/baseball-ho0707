@@ -91,7 +91,7 @@ def is_duplicated_number(three_digit):
     
     if three_digit[0] in three_digit[1:]:
         result = True
-    elif three_digit[2] in three_digit[:2]:
+    elif three_digit[1] == three_digit[2]:
         result = True
     else:
         result = False
@@ -272,12 +272,12 @@ def main():
     # 위의 코드를 포함하여 자유로운 수정이 가능함
     flag = True
     while flag:
-        user_input_number = input('Input guess number: ')
+        user_input_number = input('Input guess number : ')
         if is_validated_number(user_input_number):
             strikes_or_ball = get_strikes_or_ball(user_input_number, random_number)
             if strikes_or_ball[0] == 3:
                 while True:
-                    one_more = input('You win, one more(Y/N)?')
+                    one_more = input('You win, one more(Y/N) ?')
                     if is_yes(one_more):
                         random_number = str(get_not_duplicated_three_digit_number())
                         print("Random Number is : ", random_number)
@@ -288,7 +288,7 @@ def main():
                     else:
                         print('Wrong Input, Input again')
             else:
-                print('Strikes : {}, Balls : {}'.format(strikes_or_ball[0], strikes_or_ball[1]))
+                print('Strikes : {} , Balls : {}'.format(strikes_or_ball[0], strikes_or_ball[1]))
         else:
             print('Wrong Input, Input again')
 
