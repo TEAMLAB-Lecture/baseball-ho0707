@@ -150,9 +150,9 @@ def get_not_duplicated_three_digit_number():
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
     # get_random_number() 함수를 사용하여 random number 생성
-    result = str(random.randint(100, 999))
+    result = str(get_random_number())
     while not is_validated_number(result):
-        result = str(random.randint(100, 999))
+        result = str(get_random_number())
     # ==================================
     return result
 
@@ -285,11 +285,11 @@ def main():
                         random_number = str(get_not_duplicated_three_digit_number())
                         print("Random Number is : ", random_number)
                         break
-                    elif is_no(one_more) or one_more == '0':
+                    elif is_no(one_more):
                         flag = False
                         break
                     else:
-                        print('Wrong Input')
+                        print('Wrong Input, Input again')
         else:
             print('Wrong Input, Input again')
 
